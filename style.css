@@ -161,11 +161,17 @@ img {
 
 	.allMains {
 		display: flex;
+		justify-content: space-between;
 		flex-wrap: wrap;
 		gap: 1rem;
 	}
 
+	.main {
+		display: flex;
+		justify-content: space-between;
+	}
+
 	.allMains > * {
-		max-width: calc(50% - 1rem);
+		width: calc(50% - 1rem);
 	}
 }
