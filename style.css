@@ -152,6 +152,7 @@ img {
 
 	.option {
 		display: flex;
+		justify-content: space-between;
 	}
 
 	.description {
@@ -164,11 +165,6 @@ img {
 		justify-content: space-between;
 		flex-wrap: wrap;
 		gap: 1rem;
-	}
-
-	.main {
-		display: flex;
-		justify-content: space-between;
 	}
 
 	.allMains > * {
