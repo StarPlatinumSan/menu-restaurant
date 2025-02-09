@@ -1,0 +1,171 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Satisfy, sans-serif;
+	background-color: rgb(223, 223, 223);
+	color: #333333;
+	padding: 1rem;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	font-size: 3rem;
+	text-align: center;
+}
+
+h2 {
+	font-size: clamp(2rem, 10vw, 2.5rem);
+	text-align: center;
+}
+
+h3 {
+	font-size: 1, 5rem;
+}
+
+img {
+	max-width: clamp(20%, 30vw, 30%);
+	border-radius: 4px;
+	align-self: center;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+
+	gap: 1rem;
+	background-color: rgba(194, 255, 235, 0.788);
+	border: 2px dashed #333333;
+	padding: 1rem;
+}
+
+.highlight {
+	background-color: #333333;
+	padding: 0.2rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	border-radius: 2px;
+	color: whitesmoke;
+}
+
+.category {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	border: 3px solid #333333;
+	padding: 1rem;
+}
+
+.categoryAlternative {
+	background-color: rgb(255, 255, 255);
+	border: none;
+}
+
+.price {
+	text-decoration: underline;
+}
+
+.beverages {
+	padding: 0;
+	gap: 0;
+}
+
+.beverages > * {
+	padding: 1rem 1rem 0rem 1rem;
+}
+
+.message {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	background-color: #333333;
+	color: whitesmoke;
+	padding-top: 0rem;
+	padding: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+
+		grid-template-areas:
+			"title title"
+			"starters mains"
+			"desserts mains"
+			"soupes beverages";
+	}
+
+	.title {
+		min-width: 100%;
+		grid-area: title;
+	}
+
+	.starters {
+		grid-area: starters;
+	}
+
+	.mains {
+		grid-area: mains;
+	}
+
+	.soupes {
+		grid-area: soupes;
+	}
+
+	.desserts {
+		grid-area: desserts;
+	}
+
+	.beverages {
+		flex-direction: row;
+		flex-wrap: wrap;
+		grid-area: beverages;
+		align-self: center;
+	}
+
+	.beverages h2 {
+		width: 100%;
+	}
+
+	.message {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1300px) {
+	.container {
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-areas:
+			"starters title desserts"
+			"starters mains desserts"
+			"soupes mains beverages";
+	}
+
+	.option {
+		display: flex;
+	}
+
+	.description {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.allMains {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.allMains > * {
+		max-width: calc(50% - 1rem);
+	}
+}
