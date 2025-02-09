@@ -38,7 +38,6 @@ img {
 .container {
 	display: flex;
 	flex-direction: column;
-
 	gap: 1rem;
 	background-color: rgba(194, 255, 235, 0.788);
 	border: 2px dashed #333333;
