@@ -153,6 +153,7 @@ img {
 	.option {
 		display: flex;
 		justify-content: space-between;
+		width: 100%;
 	}
 
 	.description {
